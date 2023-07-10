@@ -3,7 +3,7 @@ import Chart from "./Chart";
 import Sidecomponent2 from "./Sidecomponent2";
 import Piechart from "./Piechart";
 import Exchange from "./Exchange";
-
+// main
 export default function Maincomp() {
   return (
     <>

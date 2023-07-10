@@ -9,7 +9,7 @@ const CoinGeckoAPI = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,dogecoin,tether,solana,sweth,ethereum&vs_currencies=${currency}&include_market_cap=true&include_24hr_change=true`
+          `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,dogecoin,tether,litecoin,ripple,solana,sweth,ethereum&vs_currencies=${currency}&include_market_cap=true&include_24hr_change=true`
         );
         const data = await response.json();
         setMarketData(data);
@@ -25,7 +25,7 @@ const CoinGeckoAPI = () => {
     const fetchchange = async () => {
       try {
         const response = await fetch(
-          `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,dogecoin,tether,solana,sweth,ethereum&vs_currencies=usd&include_24hr_change=true`
+          `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,dogecoin,tether,litecoin,ripple,solana,sweth,ethereum&vs_currencies=usd&include_24hr_change=true`
         );
         const data = await response.json();
         setMarketchange(data);

@@ -8,29 +8,10 @@ export default function Maincomponent2({ searchTerm, onBackClick }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `https://api.coingecko.com/api/v3/coins/${searchTerm.toLowerCase()}`
-  //       );
-  //       setData(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, [searchTerm]);
-
-  // if (!data) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // const { image } = data;
+ 
 
   useEffect(() => {
-    // Function to fetch cryptocurrency data from the CoinGecko API
+    
     const fetchCryptoData = async () => {
       try {
         const fetchData = async () => {
@@ -75,7 +56,7 @@ export default function Maincomponent2({ searchTerm, onBackClick }) {
   }
 
   if (!cryptoData) {
-    return null; // You can also return a loading spinner or a message while data is fetched.
+    return null; 
   }
   if (!data) {
     return <div>Loading...</div>;

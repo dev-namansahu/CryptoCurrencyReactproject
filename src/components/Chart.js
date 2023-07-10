@@ -53,15 +53,12 @@ const Chart = () => {
 
   return (
     <div>
-      <div className="row" style={{ display: "flex" }}>
-        <br />
-        <div
-          className="col-3"
-          style={{ color: "#F00000   ", paddingTop: "5px" }}
-        >
-          <label htmlFor="currency">Currency:&nbsp;</label>
+      <div className="row">
+        <div className="col-md-3 col-sm-6 mb-3">
+          <label htmlFor="currency">Currency:</label>
           <select
             id="currency"
+            className="form-select"
             value={currency}
             onChange={(e) => setCurrency(e.target.value)}
           >
@@ -73,18 +70,15 @@ const Chart = () => {
             <option value="jpy">JPY</option>
           </select>
         </div>
-        <br />
-        <div
-          className="col-3"
-          style={{ color: "#F00000  ", paddingTop: "5px" }}
-        >
-          <label htmlFor="days">Days:&nbsp;</label>
+        <div className="col-md-3 col-sm-6 mb-3">
+          <label htmlFor="days">Days:</label>
           <select
             id="days"
+            className="form-select"
             value={days}
             onChange={(e) => setDays(e.target.value)}
           >
-            <option value={1}>1 Days</option>
+            <option value={1}>1 Day</option>
             <option value={7}>7 Days</option>
             <option value={14}>14 Days</option>
             <option value={30}>30 Days</option>
@@ -93,25 +87,11 @@ const Chart = () => {
             <option value={365}>365 Days</option>
           </select>
         </div>
-        <br />
-        <div
-          className="col-3"
-          style={{ color: "#F00000  ", paddingTop: "5px" }}
-        >
-          <label htmlFor="crypto">Crypto:&nbsp;
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          </label>
+        <div className="col-md-3 col-sm-6 mb-3">
+          <label htmlFor="crypto">Crypto:</label>
           <select
             id="crypto"
+            className="form-select"
             value={crypto}
             onChange={(e) => setCrypto(e.target.value)}
           >
@@ -125,14 +105,11 @@ const Chart = () => {
             <option value="dogecoin">Dogecoin</option>
           </select>
         </div>
-        <br />
-        <div
-          className="col-3"
-          style={{ color: "#F00000  ", paddingTop: "5px" }}
-        >
-          <label htmlFor="chartType">Chart Type:&nbsp;</label>
+        <div className="col-md-3 col-sm-6 mb-3">
+          <label htmlFor="chartType">Chart Type:</label>
           <select
             id="chartType"
+            className="form-select"
             value={chartType}
             onChange={(e) => setChartType(e.target.value)}
           >

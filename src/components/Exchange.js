@@ -75,14 +75,12 @@ const Exchange = () => {
 
   return (
     <div className="row" style={{ backgroundColor: "white", height: "100%" }}>
-      <h5 style={{fontWeight:"bolder", padding:"10px"}}>Exchange coins</h5> <br />
+      <h5 style={{ fontWeight: "bolder", padding: "10px" }}>Exchange coins</h5>{" "}
+      <br />
       <div className="row" style={{ display: "flex" }}>
-        <div className="col-6">
+        <div className="col-md-6">
           <label>
-            <span style={{
-              color:"orange", fontWeight:"bold"
-            }}>Sell :&nbsp;&nbsp;
-              </span>
+            <span style={{ color: "orange", fontWeight: "bold" }}>Sell:&nbsp;&nbsp;</span>
             <select
               value={selectedSellCurrency}
               onChange={handleSellCurrencyChange}
@@ -96,7 +94,7 @@ const Exchange = () => {
           </label>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
-        <div className="col-6">
+        <div className="col-md-6">
           <label>
             <input
               type="text"
@@ -109,11 +107,9 @@ const Exchange = () => {
         </div>
       </div>
       <div className="row" style={{ display: "flex" }}>
-        <div className="col-6">
-          <label> <span style={{color:"#00CC00" , fontWeight:"bold"}}>
-          Buy:&nbsp;&nbsp;
-          </span>
-            
+        <div className="col-md-6">
+          <label>
+            <span style={{ color: "#00CC00", fontWeight: "bold" }}>Buy:&nbsp;&nbsp;</span>
             <select
               value={selectedBuyCurrency}
               onChange={handleBuyCurrencyChange}
@@ -126,12 +122,18 @@ const Exchange = () => {
             </select>
           </label>
         </div>
-        <div className="col-6">
-          <span style={{color:"#FF6666"}}>{buyValue && <p><span style={{color:"#100000 "}}>Value:</span> {buyValue}</p>}</span>
+        <div className="col-md-6">
+          <span style={{ color: "#FF6666" }}>
+            {buyValue && (
+              <p>
+                <span style={{ color: "#100000 " }}>Value:</span> {buyValue}
+              </p>
+            )}
+          </span>
         </div>
       </div>
       <br /> <br />
-      <div class="row" style={{ marginLeft: "120px" }}>
+      <div className="row" style={{ marginLeft: "120px" }}>
         <button
           onClick={handleBuyButtonClick}
           style={{ width: "150px", alignItems: "center" }}

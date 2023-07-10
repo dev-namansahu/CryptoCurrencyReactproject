@@ -8,10 +8,7 @@ export default function Maincomponent2({ searchTerm, onBackClick }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
 
- 
-
   useEffect(() => {
-    
     const fetchCryptoData = async () => {
       try {
         const fetchData = async () => {
@@ -56,7 +53,7 @@ export default function Maincomponent2({ searchTerm, onBackClick }) {
   }
 
   if (!cryptoData) {
-    return null; 
+    return null;
   }
   if (!data) {
     return <div>Loading...</div>;
@@ -69,44 +66,24 @@ export default function Maincomponent2({ searchTerm, onBackClick }) {
 
   return (
     <>
-      <div
+      <div className="row" style={{ backgroundImage: `url(${back})`, backgroundRepeat: "no-repeat", width: "100%", height:"100%" }}>
+        <div className="col-3"><button onClick={onBackClick}>Back</button></div><br /><br />
         
-        style={{
-          backgroundImage: `url(${back})`,
-          backgroundRepeat: "no-repeat",
-          width: "1290px",
-        }}
-      >
-        {" "}
-        <button onClick={onBackClick}>Back</button>
-        <div className="container" style={{ paddingLeft: "420px" }}>
-         
+        <div className="container" style={{ paddingLeft: "5%", paddingRight: "5%" }}>
           <div className="row">
-            <div className="row">
-              <div>
-                <h1 style={{ color: "gold", fontFamily: "Dancing Script" , fontSize:"45px"}}>
-                  {cryptoName.toUpperCase()}
-                </h1>
-                <br />
-                <div>
-                  <img src={image.large} style={{}} alt={cryptoName} />
-                </div>
-                <br />
-
-                <p style={{ color: "white" , fontSize:"25px"}}>
-                  Market Value: ${current_price.usd}
-                </p>
-                <br />
-                <p style={{ color: "white" , fontSize:"25px" }}>
-                  Symbol: {cryptoData.symbol.toUpperCase()}
-                </p>
-                <br />
-                <p style={{ color: "white" , fontSize:"25px"}}>
-                  Percentage Market Change in 24 hours:{" "}
-                  {price_change_percentage_24h.toFixed(2)}%
-                </p>
-              </div>
+            <div className="col-lg-12 col-md-12">
+              <h1 style={{ color: "gold", fontFamily: "Dancing Script", fontSize: "65px" }}>{cryptoName.toUpperCase()}</h1>
               <br />
+              <div>
+                <img src={image.large} style={{ maxWidth: "100%" }} alt={cryptoName} />
+              </div>
+            </div>
+            <div className="col-lg-12 col-md-12">
+              <p style={{ color: "white", fontSize: "35px" }}>Market Value: ${current_price.usd}</p>
+              <br />
+              <p style={{ color: "white", fontSize: "35px" }}>Symbol: {cryptoData.symbol.toUpperCase()}</p>
+              <br />
+              <p style={{ color: "white", fontSize: "35px" }}>Percentage Market Change in 24 hours: {price_change_percentage_24h.toFixed(2)}%</p>
             </div>
           </div>
         </div>

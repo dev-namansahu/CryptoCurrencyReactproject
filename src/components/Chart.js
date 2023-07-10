@@ -53,8 +53,8 @@ const Chart = () => {
 
   return (
     <div>
-      <div className="row">
-        <div className="col-md-3 col-sm-6 mb-3">
+      <div className="row" style={{color:"	 #cc0000" }}>
+        <div className="col-md-3 col-sm-6 mb-3" >
           <label htmlFor="currency">Currency:</label>
           <select
             id="currency"

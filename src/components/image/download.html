@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+      <meta charset="UTF-8">
+      <link rel="icon" href="//www.ibm.com/favicon.ico"><link rel="shortcut icon" type="image/x-icon" href="https://www.ibm.com/blog/wp-content/themes/sapphire/images/favicon.ico" sizes="32x32" />      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1">
+
+      <!-- DEFINITIONS -->
+      <title>Blockchain beyond cryptocurrency - IBM Blog</title>
+
+            <!--<meta name="description" content="">-->
+
+
+     
+
+      <!-- THEME COLOR -->
+      <meta name="theme-color" content="#000000">
+
+      <!-- REFERRER POLICY -->
+      <meta name="referrer" content="no-referrer-when-downgrade">
+
+      <!-- LANGUAGE/TRANSLATIONS -->
+
+      <!-- AMP SCRIPTS -->
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+      <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+      <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+      <script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script>
+      <script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script>
+      <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+      <script async custom-element="amp-autocomplete" src="https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js"></script>
+      <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+
+
+                  <!-- KALTURA   -->
+            <script src="https://cdnapisec.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841"></script>
+      
+
+      
+            <!-- CARBON SCRIPTS -->
+            <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/masthead.min.js"></script>
+            <script type="module" src="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/footer.min.js"></script>
+            <script type="module" src="//1.www.s81c.com/common/v18/js/www.js"></script>
+            <link rel="stylesheet" href="//1.www.s81c.com/common/v18/css/www.css" >
+      
+      
+      
+                  <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+            <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+                              <link rel="preload" as="image" href="https://www.ibm.com/blog/wp-content/uploads/2023/06/90aeeede-ffda-4f77-8bd18923788d72bd.xl_2x1-300x158.png" media="(max-width: 300px)">
+                  <link rel="preload" as="image" href="https://www.ibm.com/blog/wp-content/uploads/2023/06/90aeeede-ffda-4f77-8bd18923788d72bd.xl_2x1-630x330.png" media="(max-width: 1200px) and (min-width: 301px)">
+                  <link rel="preload" as="image" href="https://www.ibm.com/blog/wp-content/uploads/2023/06/90aeeede-ffda-4f77-8bd18923788d72bd.xl_2x1.png" media="(max-width: 2400px) and (min-width: 631px)">
+                  <link rel="preload" as="image" href="https://www.ibm.com/blog/wp-content/uploads/2023/06/90aeeede-ffda-4f77-8bd18923788d72bd.xl_2x1.png" media="(max-width: 2400px) and (min-width: 1201px)">
+                  
+      
+      <!-- FONTS -->
+      <!-- <link rel="preload" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,400,500|IBM+Plex+Sans:300,400,500&display=swap" rel="stylesheet"> -->
+
+      <!-- ANALYTICS -->
+      <script>
+
+  
+  
+    // Digital Registry
+    digitalData = {
+        "page": {
+            "category": {
+                "primaryCategory": "Blockchain"
+            },
+            "pageInfo": {
+                "language": "en-US",
+                "country": "US",
+                "version": "custom",
+                "effectiveDate": "2019-12-09",
+                "publishDate": "2019-12-09",
+                "optimizely": {
+                  "enabled": "false",
+                },
+                "ibm": {
+                    "contentDelivery": "WordPress",
+                    "contentProducer": "Hand coded",
+                    "owner": "IBM Blockchain Pulse",
+                    "siteID": "SECURITYINTELLIGENCE",
+                    "type": "Posts",
+                                    }
+            }
+        }
+    }
+
+    
+    // Custom Click Tagging
+    // Collect and send clicks not detectable by ida_stats.js
+    function sendClickTag(section, feature, destination) {
+      console.log(section + " " + feature)
+      var config = {
+            type              : 'ELEMENT',
+            primaryCategory   : section,              // e_a1 - Element Category
+            eventName         : feature,              // e_a2 - Element Name
+            targetURL         : destination,          // e_a7 - Element Attribute: ibmEvTarget
+          };
+      ibmStats.event(config);
+    }
+
+    // Custom Click Tagging
+    // Collect and send clicks not detectable by ida_stats.js
+    // function sendClickConversion(feature, title) {
+    //   var config = {
+    //         type               : 'pageclick',
+    //         primaryCategory    : 'PAGE CLICK',
+    //         eventCategoryGroup : "TIMELINE - SECURITY INTELLIGENCE",
+    //         eventName          : feature,
+    //         targetTitle        : title
+    //       };
+    //   ibmStats.event(config);
+    // }
+
+    // Custom Link Event
+    // Add clicktag event on every link inside the element
+    function tagAllLinks(element, section, feature) {
+      var element = document.querySelectorAll(element);
+      if (typeof(element) != 'undefined' && element != null) {
+        for (var i = 0; i < element.length; i++) {
+          var elements = element[i].querySelectorAll("a:not(.btn)");
+          for (var o = 0; o < elements.length; o++) {
+            if (elements[o].getAttribute('listener') !== 'true') {
+              var destination = elements[o].getAttribute('href');
+              elements[o].addEventListener('click', function(){
+                if (this.getAttribute('listener') === 'true') {
+                  sendClickTag(section, feature, this.getAttribute('href'));
+                  this.setAttribute('listener', 'false');
+                }
+              }, false);
+              elements[o].setAttribute('listener', 'true');
+            }
+          }
+        }
+      }
+    }
+
+    window.onload = function() {
+
+        // Call to action click tag
+        var ctaButton = document.querySelectorAll(".single__content a");
+        if (typeof(ctaButton) != 'undefined' && ctaButton != null && ctaButton.length !== 0) {
+          for (var i = 0; i < ctaButton.length; i++) {
+            ctaButton[i].addEventListener('click', function(){
+              if (this.getAttribute('listener') === 'true') {
+                sendClickTag("BODY", "CALL TO ACTION");
+                this.setAttribute('listener', 'false');
+              }
+            }, false);
+            ctaButton[i].setAttribute('listener', 'true');
+          }
+        }
+
+        // Read more click tag
+        var readButton = document.querySelectorAll(".continue-reading button");
+        if (typeof(readButton) != 'undefined' && readButton != null && readButton.length !== 0) {
+          for (var i = 0; i < readButton.length; i++) {
+            readButton[i].addEventListener('click', function(){
+              if (this.getAttribute('listener') === 'true') {
+                sendClickTag("BODY", "READ-MORE");
+                this.setAttribute('listener', 'false');
+              }
+            }, false);
+            readButton[i].setAttribute('listener', 'true');
+          }
+        }
+
+
+        //  LISTICLES tag - Arrows
+            //left arrow
+            var leftArrow = document.getElementById("prev");
+            if (typeof(leftArrow) != 'undefined' && leftArrow != null ) {
+                  //for (var i = 0; i < leftArrow.length; i++) {
+                        leftArrow.addEventListener('click', function(){
+                        if (this.getAttribute('listener') === 'true' && leftArrow.id=="prev") {
+                        sendClickTag("BODY", "LISTICLE-LEFT-ARROW");
+                        this.setAttribute('listener', 'false');
+                        }
+                  }, false);
+                  leftArrow.setAttribute('listener', 'true');
+                  //}
+            }
+            //right arrow
+            var rightArrow = document.getElementById("next");
+            if (typeof(rightArrow) != 'undefined' && rightArrow != null ) {
+                  //for (var i = 0; i < rightArrow.length; i++) {
+                  rightArrow.addEventListener('click', function(){
+                        if (this.getAttribute('listener') === 'true' && rightArrow.id=="next") {
+                        sendClickTag("BODY", "LISTICLE-RIGHT-ARROW");
+                        this.setAttribute('listener', 'false');
+                        }
+                  }, false);
+                  rightArrow.setAttribute('listener', 'true');
+                  //}
+            }
+
+
+
+        //  LISTICLES tag - numbers
+        var listicleTopButton = document.querySelectorAll(".listicle__pagination__numbers");
+        if (typeof(listicleTopButton) != 'undefined' && listicleTopButton != null && listicleTopButton.length !== 0) {
+          for (var i = 0; i < listicleTopButton.length; i++) {
+                  var currentSlide = 1;
+
+                  listicleTopButton[i].addEventListener('click', function(){
+
+                  if (this.getAttribute('listener') === 'true') {
+                        currentSlide++;
+                        var total = i;
+
+                        // var clickedSlides=currentSlide/2;
+                        // console.log(clickedSlides.toFixed());
+
+                        //I'm removing 2 because 2 arrows on the listicle are unclickable, but present on the DOM
+                        // clickableArrows = i-2;
+                        // clickableArrows = i-1;
+                        // I'm deviding by 2 because on each slide we have 2 arrows, so we were actually sendind the double of tags
+                        // clickableArrows= clickableArrows/2;
+                        // console.log(i);
+                        // clickableArrows.toFixed();
+
+                        if (currentSlide <= total){
+                              sendClickTag("PAGE CLICK", "LISTICLE-NAVIGATION-SLIDE"+currentSlide);
+                              this.setAttribute('listener', 'false');
+                        }
+                        else{
+                              sendClickTag("PAGE CLICK", "LISTICLE-NAVIGATION-END");
+                              this.setAttribute('listener', 'false');
+                        }
+
+
+                }
+            }, false);
+            listicleTopButton[i].setAttribute('listener', 'true');
+          }
+        }
+        // // Timeline box click tag
+        // var boxButton = document.querySelectorAll(".timeline__content .box");
+        // if (typeof(boxButton) != 'undefined' && boxButton != null && boxButton.length !== 0) {
+        //   for (var i = 0; i < boxButton.length; i++) {
+        //     boxButton[i].addEventListener('click', function(){
+        //       if (this.getAttribute('listener') === 'true') {
+        //         sendClickConversion("DETAILED VIEW", this.getAttribute('data-title'));
+        //         this.setAttribute('listener', 'false');
+        //       }
+        //     }, false);
+        //     boxButton[i].setAttribute('listener', 'true');
+        //   }
+        // }
+
+    };
+
+</script>
+
+<!-- COREMETRICS -->
+      <script defer src="https://1.www.s81c.com/common/stats/ida_stats.js" type="text/javascript"></script>
+
+      <!-- AMP DEFAULT CSS -->
+      <style amp-boilerplate>
+            body {
+                  -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                  -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                  -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+                  animation: -amp-start 8s steps(1, end) 0s 1 normal both
+            }
+
+            @-webkit-keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+
+            @-moz-keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+
+            @-ms-keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+
+            @-o-keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+
+            @keyframes -amp-start {
+                  from {
+                        visibility: hidden
+                  }
+
+                  to {
+                        visibility: visible
+                  }
+            }
+      </style><noscript>
+            <style amp-boilerplate>
+                  body {
+                        -webkit-animation: none;
+                        -moz-animation: none;
+                        -ms-animation: none;
+                        animation: none
+                  }
+            </style>
+      </noscript>
+
+      <link rel="stylesheet" href="https://www.ibm.com/blog/wp-content/themes/sapphire/minifications/modules.css?v=1688672191">
+
+      <!-- CUSTOM CSS -->
+      <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Find out how blockchain will change many industries beyond crypto — increase quality of life and reduce fraud — it’s simply a matter of time." />
+	<link rel="canonical" href="https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Blockchain beyond cryptocurrency - IBM Blog" />
+	<meta property="og:description" content="Find out how blockchain will change many industries beyond crypto — increase quality of life and reduce fraud — it’s simply a matter of time." />
+	<meta property="og:url" content="https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/" />
+	<meta property="og:site_name" content="IBM Blog" />
+	<meta property="article:published_time" content="2019-12-09T14:30:15+00:00" />
+	<meta property="article:modified_time" content="2022-01-11T14:50:34+00:00" />
+	<meta property="og:image" content="https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg" />
+	<meta property="og:image:width" content="1" />
+	<meta property="og:image:height" content="1" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="IBM Blockchain Pulse" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="IBM Blockchain Pulse" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="6 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/","url":"https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/","name":"Blockchain beyond cryptocurrency - IBM Blog","isPartOf":{"@id":"https://www.ibm.com/blog/#website"},"primaryImageOfPage":{"@id":"https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/#primaryimage"},"image":{"@id":"https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/#primaryimage"},"thumbnailUrl":"https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg","datePublished":"2019-12-09T14:30:15+00:00","dateModified":"2022-01-11T14:50:34+00:00","author":{"@id":"https://www.ibm.com/blog/#/schema/person/8da5684c1cc145e51ec100f461934f00"},"description":"Find out how blockchain will change many industries beyond crypto — increase quality of life and reduce fraud — it’s simply a matter of time.","breadcrumb":{"@id":"https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/#primaryimage","url":"https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg","contentUrl":"https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg"},{"@type":"BreadcrumbList","@id":"https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://admin01.prod.blogs.cis.ibm.net/blog/"},{"@type":"ListItem","position":2,"name":"Blockchain beyond cryptocurrency"}]},{"@type":"WebSite","@id":"https://www.ibm.com/blog/#website","url":"https://www.ibm.com/blog/","name":"IBM Blog","description":"IBM Blog","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.ibm.com/blog/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.ibm.com/blog/#/schema/person/8da5684c1cc145e51ec100f461934f00","name":"IBM Blockchain Pulse","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ibm.com/blog/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/5f6287a05425f2c3425705b87218d899?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/5f6287a05425f2c3425705b87218d899?s=96&d=mm&r=g","caption":"IBM Blockchain Pulse"},"url":"https://www.ibm.com/blog/author/ibm-blockchain-unleashed/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="IBM Blog &raquo; Blockchain beyond cryptocurrency Comments Feed" href="https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.ibm.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://www.ibm.com/blog/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://www.ibm.com/blog/wp-includes/css/classic-themes.min.css?ver=6.2.2' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='taxonomy-image-plugin-public-css' href='https://www.ibm.com/blog/wp-content/plugins/taxonomy-images/css/style.css?ver=0.9.6' type='text/css' media='screen' />
+<script type='text/javascript' src='https://www.ibm.com/blog/wp-includes/js/jquery/jquery.min.js?ver=3.6.4' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.ibm.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://www.ibm.com/blog/wp-json/" /><link rel="alternate" type="application/json" href="https://www.ibm.com/blog/wp-json/wp/v2/posts/438912" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ibm.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.ibm.com/blog/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.2.2" />
+<link rel='shortlink' href='https://www.ibm.com/blog/?p=438912' />
+<link rel="alternate" type="application/json+oembed" href="https://www.ibm.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ibm.com%2Fblog%2Fblockchain-beyond-cryptocurrency%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.ibm.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ibm.com%2Fblog%2Fblockchain-beyond-cryptocurrency%2F&#038;format=xml" />
+<style amp-custom>@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,300,400,500,600');@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,400,500,600,700');@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap')</style><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://www.ibm.com/blog/wp-content/themes/sapphire/minifications/single.css?v=1688672192">
+      <!-- YOAST SEO -->
+      
+</head>
+
+<body class="">
+    <dds-masthead-composite id="masthead-container"></dds-masthead-composite>
+    
+
+    <script type="module">
+        //L1 nav
+        const l1Data = {
+            title: 'IBM Blog',
+            url: 'https://www.ibm.com/blog/',
+            menuItems: [{
+                    hasMenu: true,
+                    title: 'Topics',
+                    titleEnglish: 'Topics',
+                    menuSections: [{
+                        menuItems: [{
+                                title: 'Analytics',
+                                url: 'https://www.ibm.com/blog/category/analytics/'
+                            },
+                            {
+                                title: 'Artificial intelligence',
+                                url: 'https://www.ibm.com/blog/category/artificial-intelligence/'
+                            },
+                            {
+                                title: 'Automation',
+                                url: 'https://www.ibm.com/blog/category/automation/'
+                            },
+                            {
+                                title: 'Blockchain',
+                                url: 'https://www.ibm.com/blog/category/blockchain/'
+                            },
+                            {
+                                title: 'Business transformation',
+                                url: 'https://www.ibm.com/blog/category/business-transformation/'
+                            },
+                            {
+                                title: 'Cloud',
+                                url: 'https://www.ibm.com/blog/category/cloud/'
+                            },
+                            {
+                                title: 'Social impact',
+                                url: 'https://www.ibm.com/blog/category/social-impact/'
+                            },
+                            {
+                                title: 'Supply chain',
+                                url: 'https://www.ibm.com/blog/category/supply-chain/'
+                            },
+                            {
+                                title: 'Sustainability',
+                                url: 'https://www.ibm.com/blog/category/sustainability/'
+                            },
+                        ]
+                    }],
+                },
+                {
+                    hasMenu: true,
+                    title: 'Industries',
+                    titleEnglish: 'Industries',
+                    menuSections: [{
+                        menuItems: [{
+                                title: 'Banking',
+                                url: 'https://www.ibm.com/blog/category/banking/'
+                            },
+                            {
+                                title: 'Energy and utilities',
+                                url: 'https://www.ibm.com/blog/category/energy-and-utilities/'
+                            },
+                            {
+                                title: 'Financial services',
+                                url: 'https://www.ibm.com/blog/category/financial-services/'
+                            },
+                            {
+                                title: 'Government',
+                                url: 'https://www.ibm.com/blog/category/government/'
+                            },
+                            {
+                                title: 'Healthcare',
+                                url: 'https://www.ibm.com/blog/category/healthcare/'
+                            },
+                            {
+                                title: 'Manufacturing',
+                                url: 'https://www.ibm.com/blog/category/manufacturing/'
+                            },
+                            {
+                                title: 'Media and entertainment',
+                                url: 'https://www.ibm.com/blog/category/media-and-entertainment/'
+                            },
+                            {
+                                title: 'Mining and extraction',
+                                url: 'https://www.ibm.com/blog/category/mining-and-extraction/'
+                            },
+                            {
+                                title: 'Retail',
+                                url: 'https://www.ibm.com/blog/category/retail/'
+                            },
+                            {
+                                title: 'Technology',
+                                url: 'https://www.ibm.com/blog/category/technology/'
+                            },
+                            {
+                                title: 'Telecommunications',
+                                url: 'https://www.ibm.com/blog/category/telecommunications/'
+                            },
+                            {
+                                title: 'Transportation',
+                                url: 'https://www.ibm.com/blog/category/transportation/'
+                            },
+                        ]
+                    }],
+                },
+                {
+                    title: 'Announcements',
+                    titleEnglish: 'Announcements',
+                    url: 'https://www.ibm.com/blog/announcements/'
+                },
+                {
+                    title: 'Newsroom',
+                    titleEnglish: 'Newsroom',
+                    url: 'https://newsroom.ibm.com/'
+                },
+                {
+                    hasMenu: true,
+                    title: 'Explore',
+                    titleEnglish: 'Explore',
+                    menuSections: [{
+                        menuItems: [{
+                                title: 'Security Intelligence',
+                                url: 'https://securityintelligence.com/'
+                            },
+                            {
+                                title: 'Developer',
+                                url: 'https://developer.ibm.com/'
+                            },
+                            {
+                                title: 'Research',
+                                url: 'https://research.ibm.com/blog/'
+                            }
+                        ]
+                    }]
+                }
+            ]
+        };
+        document.querySelector('dds-masthead-composite').l1Data = l1Data;
+
+
+        document.querySelector('dds-masthead-composite').activateSearch = true;
+
+        //Creating search scope modifier
+        let str = '<div slot="search" id="search-modifier"><input type="checkbox" id="search-platform" name="search-platform" value="https://www.ibm.com/search?lnk=mhsrch"><label for="search-platform">Search within IBM Blogs</label></div>';
+        document.querySelector('dds-masthead').insertAdjacentHTML('beforeend', str);
+
+        //Checking if mouse is hovering scope modifier
+        let isMouseHover = false
+        let searchModifier = document.getElementById("search-modifier");
+        searchModifier.addEventListener("mouseleave", () => {
+            isMouseHover = false
+        }, false);
+        searchModifier.addEventListener("mouseover", () => {
+            isMouseHover = true
+        }, false);
+
+        //Enabling search inside blog
+        document.querySelector('dds-search-with-typeahead').redirectUrl = "https://www.ibm.com/blog/?";
+        document.querySelector('dds-search-with-typeahead').searchPlaceholder = "Search within IBM Blogs";
+
+        //Event for scope modifier checkbox click
+        document.getElementById("search-platform").addEventListener("click", (e) => {
+            if (e.target.checked == false) {
+                //Enabling search inside ibm.com
+                document.querySelector('dds-search-with-typeahead').redirectUrl = "https://www.ibm.com/search?lnk=mhsrch";
+                document.querySelector('dds-search-with-typeahead').searchPlaceholder = "Search all of IBM";
+            } else {
+                //Enabling search inside blog
+                document.querySelector('dds-search-with-typeahead').redirectUrl = "https://www.ibm.com/blog/";
+                document.querySelector('dds-search-with-typeahead').searchPlaceholder = "Search within IBM Blogs";
+            }
+        }, false);
+
+        //Open/Close search scope modifier events
+        document.addEventListener("dds-search-with-typeahead-input", (e) => {
+            let searchMod = document.getElementById("search-modifier");
+            if (document.querySelector('dds-search-with-typeahead').open || isMouseHover) {
+                searchMod.style.display = "block";
+            }
+        });
+        document.addEventListener("dds-search-with-typeahead-toggled", (e) => {
+            let searchMod = document.getElementById("search-modifier");
+            console.log(e.detail);
+            if (e.detail.active || e.detail.open || isMouseHover) {
+                searchMod.style.display = "block";
+            } else {
+                searchMod.style.display = "none";
+            }
+
+        });
+
+        //Closing search and hiding scope modifier
+        document.getElementById("search-platform").checked = true;
+        document.querySelector('dds-masthead-composite').activateSearch = false;
+        document.getElementById("search-modifier").style.display = "none";
+    </script>
+
+    <!-- NAVIGATION -->
+<!-- BACK TO TOP -->
+<div class="scroll-to-top ">
+
+    <!-- TOP VIEWER TRIGGER -->
+    <div id="top-viewer" class="scroll-to-top__viewer"></div>
+
+    <!-- BUTTON -->
+    <div class="sticky" style="height: 100%;">
+            
+            <button     id="scrollToTopButton" 
+                        on="tap:top-viewer.scrollTo(duration=200, position=bottom)" 
+                        class="tap_target ">
+                        
+                        <div class="scroll-to-top__button">
+                              <amp-img width="12" height="16" layout="fixed" alt="Back-to-top" src="https://www.ibm.com/blog/wp-content/themes/sapphire/images/scroll-to-top.svg"></amp-img>
+                        </div>
+            </button>
+
+    </div>
+
+    <!-- SCROLL SHOW/HIDE ANIMATION -->
+    <amp-animation id="showAnim" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "200ms",
+                "fill": "both",
+                "iterations": "1",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": "#scrollToTopButton",
+                    "keyframes": [{
+                        "opacity": "1",
+                        "visibility": "visible"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
+    <amp-animation id="hideAnim" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "200ms",
+                "fill": "both",
+                "iterations": "1",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": "#scrollToTopButton",
+                    "keyframes": [{
+                        "opacity": "0",
+                        "visibility": "hidden"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
+</div>
+
+<!-- CHECK PAGE POSITION -->
+<amp-position-observer target="top-viewer" intersection-ratios="0" on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer>
+
+<!-- SCHEMA -->
+<script id="post-schema" type="application/ld+json">
+      {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "headline": "Blockchain beyond cryptocurrency",
+      "mainEntityOfPage": "https://www.ibm.com/blog/blockchain-beyond-cryptocurrency/",
+      "author": {
+            "@type": "Person",
+            "name": "IBM Blockchain Pulse"
+      },
+      "datePublished": "2019-12-09T09:30:15-05:00",
+      "dateModified": "2022-01-11T09:50:34-05:00",
+      "publisher": {
+            "@type": "Organization",
+            "name": "Security Intelligence",
+            "logo":{
+                  "@type": "ImageObject",
+                  "url": "https://securityintelligence.com/wp-content/themes/security-intelligence/assets/img/logo.png"
+            }
+      },
+      "image": [ "https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg" ],
+      "articleBody": "&lt;img class=&quot; wp-image-51113 alignleft&quot; src=&quot;../wp-content/uploads/2019/12/Retina_Display-758591537.jpg&quot; alt=&quot;light points&quot; width=&quot;352&quot; height=&quot;198&quot;&gt;
+I still find the word &lt;em&gt;blockchain&lt;/em&gt; elicits thoughts of cryptocurrency much of the time, which does disservice to this disruptive new technology. Bitcoin launched in 2011 and was the first large scale implementation of &lt;a href=&quot;https://www.ibm.com/blockchain/what-is-blockchain?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+What+Is+Blockchain+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+What+Is+Blockchain+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;blockchain&lt;/a&gt; technology. Media, investors and bleeding edge technologists have talked about cryptocurrencies for years and folks incorrectly think these technologies are one in the same.
+
+For clarity, cryptocurrencies are to blockchain what the combustion engine is to automobiles. Large companies including IBM, Walmart, Maersk, DeBeers and others invested substantial money in blockchain to improve and secure &lt;a href=&quot;https://www.ibm.com/blockchain/for-business?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+For+Business+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+For+Business+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;business&lt;/a&gt; worldwide. Blockchain exists with real world implementations beyond cryptocurrencies and these &lt;a href=&quot;https://www.ibm.com/blockchain/solutions?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000026VK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Solutions+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Solutions+Page&amp;cm_mmca1=000026VK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;solutions&lt;/a&gt; deliver powerful benefits to healthcare organizations, bankers, retailers and consumers among others.
+
+&lt;a class=&quot;button&quot; href=&quot;https://www.ibm.com/blockchain/for-business?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+CTA+Button+1+For+Business+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+CTA+Button+1+For+Business+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Leverage blockchain to transform your business and disrupt your industry&lt;/a&gt;
+&lt;h2 class=&quot;ibm-h2&quot;&gt;What is blockchain?&lt;/h2&gt;
+&lt;a href=&quot;https://www.ibm.com/blockchain?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Blockchain&lt;/a&gt; is a shared, distributed ledger with decentralized control. Blockchains include blocks linked together into chains. Each chain consists of encrypted data made up, in part, of data from the previous block to create the encryption. Blockchains exist as both public and private ledgers. Certain implementations allow any interested party to participate while others require invitation and access rights. Key benefits of blockchain technology include encryption, provenance and immutability.
+
+Encryption jumbles up data making it unreadable without a key. Provenance refers to a data trail ensuring validity and integrity of the data history. Immutability means that data cannot change once a block becomes validated. Tying decentralization in with encryption, provenance, and immutability creates a new, disruptive, secure technology poised to change &lt;a href=&quot;https://www.ibm.com/blockchain/industries?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Industries+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Industries+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;industries&lt;/a&gt; worldwide.
+
+Blockchains involve encrypted data in each &lt;em&gt;block&lt;/em&gt; related to whatever the system designers’ desire. In the banking world the block may include name, account number, transaction type, amount or other information. For retail solutions blockchain data may include the item purchased, serial number, date purchased and manufactured location.
+
+Businesses looking at blockchain implementations identify transaction specific information and place that data inside the blocks which make up the blockchain related to their needs. There’s no limit to what types of industry or transactions that will benefit from blockchain technology. Many companies and vertical markets already have live implementations as blockchain sees more and more &lt;a href=&quot;https://www.ibm.com/blockchain/use-cases?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Use+Cases+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Use+Cases+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;use cases&lt;/a&gt; around the world on a regular basis.
+&lt;h2 class=&quot;ibm-h2&quot;&gt;Blockchain use cases&lt;/h2&gt;
+The most well-known blockchain technologies in production today involve cryptocurrency. There are scores of deployments with Bitcoin as the most popular. Others with unique and valuable properties include Ripple and Ethereum. Ripple has a nice foothold in global finance markets and Ethereum uses &lt;a href=&quot;https://www.ibm.com/topics/smart-contracts?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain-beyond-cryptocurrency-In-Text&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;smart contracts&lt;/a&gt; to replace escrow and for &lt;a href=&quot;https://www.ibm.com/blockchain/solutions/identity?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000026VK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Identity+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Identity+Page&amp;cm_mmca1=000026VK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;digital identity&lt;/a&gt; management and along with other implementations.
+
+Most cryptocurrency deployments involve public blockchains allowing anyone to participate. Most corporate blockchain deployments utilize a private ledger limiting access and authorization. While cryptocurrency’s have a valid place in the blockchain world, they by no means cover the vast possibilities behind this emerging technology.
+
+&lt;a href=&quot;https://www.ibm.com/blockchain/industries/financial-services?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Financial+Services+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Financial+Services+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Financial services&lt;/a&gt; have one of the greatest rationales for utilizing blockchain. The inherent security and immutability directly tie into key requirements for banking and &lt;a href=&quot;https://www.ibm.com/blockchain/industries/insurance?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Insurance+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Insurance+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;insurance&lt;/a&gt;. American Express appears to understand these facets and have taken steps in a few different areas of their business to deploy blockchain. &lt;a href=&quot;https://www.pymnts.com/news/b2b-payments/2018/real-time-cross-border-corporate-payment-test/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;American Express&lt;/a&gt; joined Ripple’s global payment network and launched a blockchain for membership rewards.
+
+These activities happened in 2017 and 2018 and there’s expectations for both growth in these areas and new blockchain deployments in the future. Near real-time updates with the distributed ledger informing everyone in the value chain to activities performed creates great value for financial services. American Express was one of the first financial services firms to implement real world use cases for blockchain. Their competition will certainly join the fray when they see the benefits American Express gleans from utilizing this disruptive technology.
+
+De Beers is an international corporation specializing in diamond exploration and mining, among other activities. In 2015 &lt;a href=&quot;https://www.reuters.com/article/us-anglo-debeers-blockchain/de-beers-tracks-diamonds-through-supply-chain-using-blockchain-idUSKBN1IB1CY&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;De Beers created Tracr&lt;/a&gt;, a blockchain platform created to track diamonds from the mine to customer. Diamond exploration and mining suffers from certain immoral practices and customers want to know the path of their product before purchase. According to Bruce Cleaver, De Beers CEO, “The Tracr project team has demonstrated that it can successfully track a diamond through the value chain, providing asset-traceability assurance in a way that was not possible before.”
+
+By showing where the diamond originated through the distribution chain and ultimately into a retail store, De Beers can show buyers the provenance of each diamond. Blockchain offers key capabilities that enable De Beers the ability to provide peace of mind to end customers, something no other technology was able to do.
+
+Numerous companies provide specific blockchain-focused solutions for &lt;a href=&quot;https://www.ibm.com/blogs/blockchain/category/blockchain-in-healthcare?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Blog+Category&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Blog+Category&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;healthcare&lt;/a&gt; organizations. &lt;a href=&quot;https://medicalchain.com/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Medicalchain&lt;/a&gt; uses blockchain technology to securely store health records for a collaborative, smart approach to healthcare. This solution can protect patients from any number of hacks we’ve seen impact healthcare providers and payers.
+
+Another key challenge in healthcare is that medical records don’t cross providers. If a patient visits an emergency room at one hospital, there’s a good chance that data won’t traverse to the primary care provider. Additionally, the ER won’t have access to the patient’s history. &lt;a href=&quot;https://builtin.com/blockchain/blockchain-healthcare-applications-companies&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;SimplyVital Health&lt;/a&gt; solves this problem with an open source blockchain-based database granting secure access to patient information enabling care coordination.
+
+&lt;a href=&quot;https://www.blockchainalmanac.com/supply-chain-and-logistics/blockpharma/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;BlockPharma&lt;/a&gt; has a blockchain solution created to track drugs and fight against counterfeiting. The idea here mirrors what De Beers did in tracking diamonds, this time with the goal of saving lives. Blockchain use cases can cross industry as most business benefit from data security, provenance and immutability. Dozens of companies see the value and are working in the healthcare sector creating and delivering blockchain-based solutions.
+&lt;h2 class=&quot;ibm-h2&quot;&gt;Where does blockchain go from here?&lt;/h2&gt;
+Blockchain sees its &lt;a href=&quot;https://coincentral.com/merkle-tree-hashing-blockchain/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;origins&lt;/a&gt; back to 1979 with a major move forward in 1991; however, the first real world application, Bitcoin, did not launch until 2011. While Bitcoin launched eight years ago, and in the technology world this equals light years, blockchain still has a ways to go. There are extensive ideas in large numbers of industries for blockchain use; however, we are still a few years away from mass deployment. Whether discussing blockchain deployments with voting, agriculture, &lt;a href=&quot;https://www.ibm.com/blogs/blockchain/category/blockchain-for-government?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Blog+Category&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Blog+Category&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;government&lt;/a&gt; currency or entertainment, there are challenges preventing large scale deployments.
+
+Use cases for blockchain deployment see no limit, the barrier for implementations revolve around acceptance, courage to take the lead and overcoming a security concern barrier. As with most new technology, security takes a while to gain confidence by users. Thefts involving numerous cryptocurrencies garnered a lot of attention and there’s unfortunately a negative impact on the perception of blockchain technology when these attacks succeed.
+
+While nearly all the cryptocurrency hacks involved something other than the underlying blockchain technology, or its security, perception becomes reality impacting blockchain adoption. Even though these attacks hinder blockchain adoption, they will not stop it.
+
+Blockchain will change many industries, increase quality of life and reduce fraud, it’s simply a matter of time.
+
+&lt;a class=&quot;button&quot; href=&quot;https://www.ibm.com/blockchain/industries?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+CTA+Button+2+Industries+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+CTA+Button+2+Industries+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Learn how industries are revolutionizing business with IBM Blockchain&lt;/a&gt;"
+      }
+</script>
+
+<!-- BREADCRUMB SCHEMA -->
+<script id="post-schema" type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://securityintelligence.com/"
+            },
+                    ]
+    }
+</script>
+
+<div class="dark_background"  style="background:#f2f4f8;"></div>
+<div class="container grid" style="background:#f2f4f8;">
+      <!-- Breadcrumbs -->
+      
+<aside class="breadcrumbs breadcrumbs--IBM_blog">
+      <h1 class="breadcrumbs__page_title">Blockchain beyond cryptocurrency</h1>      </aside>
+</div>
+<div class="container grid hero_background hero--IBM_blog">
+      <div class="grid__content post post--IBM_blog">
+            <div class="post__thumbnail">                <amp-img 
+                    alt="" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg" 
+                    srcset="https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg 300w,
+                        https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg 630w,
+                        https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg 1200w,
+                        https://www.ibm.com/blog/wp-content/uploads/2022/12/aerialsanjosecostarica3.xlr.jpg 2400w"
+                >
+                </amp-img>
+                        </div>
+      <section class="article__info">
+
+            <!-- Top portion -->
+            <div class="top_wrapper--IBM_blog">
+                  <div class="cat_date_wrapper--IBM_blog">
+                  <span class="article__info__author_box">
+                        By <a href="https://www.ibm.com/blog/author/ibm-blockchain-unleashed/" >IBM Blockchain Pulse</a>
+                              
+                                                                  
+                  </span>
+                        <span class="article__info__read-time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 5</span> <span class="rt-label rt-postfix">min read</span></span></span>
+                        </div>
+                        <div class="cat_date_align--IBM_blog">
+                        <span class="article__info__cat"><a href="https://www.ibm.com/blog/category/blockchain/">Blockchain</a></span>
+                                    <span class="article__info__date">December 9, 2019</span>
+                        </div>
+                  
+
+            </div>
+      
+      </section>
+
+<div class="single__header">
+    <!-- SERIES COLLECTION -->
+        
+</div>
+
+
+            <main class="post__content  " id="post__content">
+                  
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p><amp-img src="../wp-content/uploads/2019/12/Retina_Display-758591537.jpg" layout="intrinsic" class=" wp-image-51113 alignleft" alt="light points" width="352" height="198" lightbox="lightbox"></amp-img><br>
+I still find the word <em>blockchain</em> elicits thoughts of cryptocurrency much of the time, which does disservice to this disruptive new technology. Bitcoin launched in 2011 and was the first large scale implementation of <a href="https://www.ibm.com/blockchain/what-is-blockchain?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+What+Is+Blockchain+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+What+Is+Blockchain+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >blockchain</a> technology. Media, investors and bleeding edge technologists have talked about cryptocurrencies for years and folks incorrectly think these technologies are one in the same.</p>
+<p>For clarity, cryptocurrencies are to blockchain what the combustion engine is to automobiles. Large companies including IBM, Walmart, Maersk, DeBeers and others invested substantial money in blockchain to improve and secure <a href="https://www.ibm.com/blockchain/for-business?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+For+Business+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+For+Business+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >business</a> worldwide. Blockchain exists with real world implementations beyond cryptocurrencies and these <a href="https://www.ibm.com/blockchain/solutions?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000026VK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Solutions+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Solutions+Page&amp;cm_mmca1=000026VK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >solutions</a> deliver powerful benefits to healthcare organizations, bankers, retailers and consumers among others.</p>
+<p><a class="button" href="https://www.ibm.com/blockchain/for-business?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+CTA+Button+1+For+Business+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+CTA+Button+1+For+Business+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >Leverage blockchain to transform your business and disrupt your industry</a></p>
+<h2 class="ibm-h2">What is blockchain?</h2>
+<p><a href="https://www.ibm.com/blockchain?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >Blockchain</a> is a shared, distributed ledger with decentralized control. Blockchains include blocks linked together into chains. Each chain consists of encrypted data made up, in part, of data from the previous block to create the encryption. Blockchains exist as both public and private ledgers. Certain implementations allow any interested party to participate while others require invitation and access rights. Key benefits of blockchain technology include encryption, provenance and immutability.</p>
+<p>Encryption jumbles up data making it unreadable without a key. Provenance refers to a data trail ensuring validity and integrity of the data history. Immutability means that data cannot change once a block becomes validated. Tying decentralization in with encryption, provenance, and immutability creates a new, disruptive, secure technology poised to change <a href="https://www.ibm.com/blockchain/industries?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Industries+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Industries+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >industries</a> worldwide.</p>
+<p>Blockchains involve encrypted data in each <em>block</em> related to whatever the system designers&rsquo; desire. In the banking world the block may include name, account number, transaction type, amount or other information. For retail solutions blockchain data may include the item purchased, serial number, date purchased and manufactured location.</p>
+<p>Businesses looking at blockchain implementations identify transaction specific information and place that data inside the blocks which make up the blockchain related to their needs. There&rsquo;s no limit to what types of industry or transactions that will benefit from blockchain technology. Many companies and vertical markets already have live implementations as blockchain sees more and more <a href="https://www.ibm.com/blockchain/use-cases?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Use+Cases+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Use+Cases+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >use cases</a> around the world on a regular basis.</p>
+<h2 class="ibm-h2">Blockchain use cases</h2>
+<p>The most well-known blockchain technologies in production today involve cryptocurrency. There are scores of deployments with Bitcoin as the most popular. Others with unique and valuable properties include Ripple and Ethereum. Ripple has a nice foothold in global finance markets and Ethereum uses <a href="https://www.ibm.com/topics/smart-contracts?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain-beyond-cryptocurrency-In-Text"  target="_blank" rel="noopener nofollow" >smart contracts</a> to replace escrow and for <a href="https://www.ibm.com/blockchain/solutions/identity?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000026VK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Identity+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Identity+Page&amp;cm_mmca1=000026VK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >digital identity</a> management and along with other implementations.</p>
+<p>Most cryptocurrency deployments involve public blockchains allowing anyone to participate. Most corporate blockchain deployments utilize a private ledger limiting access and authorization. While cryptocurrency&rsquo;s have a valid place in the blockchain world, they by no means cover the vast possibilities behind this emerging technology.</p>
+<p><a href="https://www.ibm.com/blockchain/industries/financial-services?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Financial+Services+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Financial+Services+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >Financial services</a> have one of the greatest rationales for utilizing blockchain. The inherent security and immutability directly tie into key requirements for banking and <a href="https://www.ibm.com/blockchain/industries/insurance?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Insurance+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Insurance+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >insurance</a>. American Express appears to understand these facets and have taken steps in a few different areas of their business to deploy blockchain. <a href="https://www.pymnts.com/news/b2b-payments/2018/real-time-cross-border-corporate-payment-test/" target="_blank" rel="noopener nofollow"  target="_blank" rel="noopener nofollow" >American Express</a> joined Ripple&rsquo;s global payment network and launched a blockchain for membership rewards.</p>
+<p>These activities happened in 2017 and 2018 and there&rsquo;s expectations for both growth in these areas and new blockchain deployments in the future. Near real-time updates with the distributed ledger informing everyone in the value chain to activities performed creates great value for financial services. American Express was one of the first financial services firms to implement real world use cases for blockchain. Their competition will certainly join the fray when they see the benefits American Express gleans from utilizing this disruptive technology.</p>
+<p>De Beers is an international corporation specializing in diamond exploration and mining, among other activities. In 2015 <a href="https://www.reuters.com/article/us-anglo-debeers-blockchain/de-beers-tracks-diamonds-through-supply-chain-using-blockchain-idUSKBN1IB1CY" target="_blank" rel="noopener nofollow"  target="_blank" rel="noopener nofollow" >De Beers created Tracr</a>, a blockchain platform created to track diamonds from the mine to customer. Diamond exploration and mining suffers from certain immoral practices and customers want to know the path of their product before purchase. According to Bruce Cleaver, De Beers CEO, &ldquo;The Tracr project team has demonstrated that it can successfully track a diamond through the value chain, providing asset-traceability assurance in a way that was not possible before.&rdquo;</p>
+<p>By showing where the diamond originated through the distribution chain and ultimately into a retail store, De Beers can show buyers the provenance of each diamond. Blockchain offers key capabilities that enable De Beers the ability to provide peace of mind to end customers, something no other technology was able to do.</p>
+<p>Numerous companies provide specific blockchain-focused solutions for <a href="https://www.ibm.com/blogs/blockchain/category/blockchain-in-healthcare?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Blog+Category&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Blog+Category&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >healthcare</a> organizations. <a href="https://medicalchain.com/en/" target="_blank" rel="noopener nofollow"  target="_blank" rel="noopener nofollow" >Medicalchain</a> uses blockchain technology to securely store health records for a collaborative, smart approach to healthcare. This solution can protect patients from any number of hacks we&rsquo;ve seen impact healthcare providers and payers.</p>
+<p>Another key challenge in healthcare is that medical records don&rsquo;t cross providers. If a patient visits an emergency room at one hospital, there&rsquo;s a good chance that data won&rsquo;t traverse to the primary care provider. Additionally, the ER won&rsquo;t have access to the patient&rsquo;s history. <a href="https://builtin.com/blockchain/blockchain-healthcare-applications-companies" target="_blank" rel="noopener nofollow"  target="_blank" rel="noopener nofollow" >SimplyVital Health</a> solves this problem with an open source blockchain-based database granting secure access to patient information enabling care coordination.</p>
+<p><a href="https://www.blockchainalmanac.com/supply-chain-and-logistics/blockpharma/" target="_blank" rel="noopener nofollow"  target="_blank" rel="noopener nofollow" >BlockPharma</a> has a blockchain solution created to track drugs and fight against counterfeiting. The idea here mirrors what De Beers did in tracking diamonds, this time with the goal of saving lives. Blockchain use cases can cross industry as most business benefit from data security, provenance and immutability. Dozens of companies see the value and are working in the healthcare sector creating and delivering blockchain-based solutions.</p>
+<h2 class="ibm-h2">Where does blockchain go from here?</h2>
+<p>Blockchain sees its <a href="https://coincentral.com/merkle-tree-hashing-blockchain/" target="_blank" rel="noopener nofollow"  target="_blank" rel="noopener nofollow" >origins</a> back to 1979 with a major move forward in 1991; however, the first real world application, Bitcoin, did not launch until 2011. While Bitcoin launched eight years ago, and in the technology world this equals light years, blockchain still has a ways to go. There are extensive ideas in large numbers of industries for blockchain use; however, we are still a few years away from mass deployment. Whether discussing blockchain deployments with voting, agriculture, <a href="https://www.ibm.com/blogs/blockchain/category/blockchain-for-government?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Blog+Category&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+In+Text+Blockchain+Blog+Category&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >government</a> currency or entertainment, there are challenges preventing large scale deployments.</p>
+<p>Use cases for blockchain deployment see no limit, the barrier for implementations revolve around acceptance, courage to take the lead and overcoming a security concern barrier. As with most new technology, security takes a while to gain confidence by users. Thefts involving numerous cryptocurrencies garnered a lot of attention and there&rsquo;s unfortunately a negative impact on the perception of blockchain technology when these attacks succeed.</p>
+<p>While nearly all the cryptocurrency hacks involved something other than the underlying blockchain technology, or its security, perception becomes reality impacting blockchain adoption. Even though these attacks hinder blockchain adoption, they will not stop it.</p>
+<p>Blockchain will change many industries, increase quality of life and reduce fraud, it&rsquo;s simply a matter of time.</p>
+<p><a class="button" href="https://www.ibm.com/blockchain/industries?utm_medium=OSocial&amp;utm_source=Blog&amp;utm_content=000020YK&amp;utm_term=10005803&amp;utm_id=Blockchain+beyond+cryptocurrency+CTA+Button+2+Industries+Page&amp;cm_mmc=OSocial_Blog-_-Blockchain+and+Watson+Financial+Services_Blockchain-_-WW_WW-_-Blockchain+beyond+cryptocurrency+CTA+Button+2+Industries+Page&amp;cm_mmca1=000020YK&amp;cm_mmca2=10005803"  target="_blank" rel="noopener nofollow" >Learn how industries are revolutionizing business with IBM Blockchain</a></p>
+<script type="text/javascript"  src="/ZXA8U/OLzo/FgCh/xeVvBj/5/pYEzNJw86b/TAtmA10D/VQQ/fWUAKYj0"></script><link rel="stylesheet" type="text/css"  href="/_sec/cp_challenge/sec-3-10.css">
+                                        <script  src="/_sec/cp_challenge/sec-cpt-3-10.js" async defer></script>
+                                        <div id="sec-overlay" style="display:none;">
+                                        <div id="sec-container">
+                                        </div>
+                                      </div></body></html>
+<div id="nc_pixel"></div>
+<div class="post__tags">
+<h3 style="text-transform: capitalize; font-family: IBM Plex Sans,sans-serif; font-size: 18px;font-weight: 600;">Tags</h3>    <a href="https://www.ibm.com/blog/tag/smart-contracts/" rel="tag">smart contracts</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/eric-jeffery/" rel="tag">eric jeffery</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/medicalchain/" rel="tag">medicalchain</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/blockpharma/" rel="tag">blockpharma</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/simplyvital-health/" rel="tag">simplyvital health</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/tracr/" rel="tag">tracr</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/de-beers/" rel="tag">de beers</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/american-express/" rel="tag">american express</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/business/" rel="tag">business</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/industries/" rel="tag">industries</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/financial-services/" rel="tag">financial services</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/digital-identity/" rel="tag">digital identity</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/cryptocurrency/" rel="tag">cryptocurrency</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/solutions/" rel="tag">solutions</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/blockchain/" rel="tag">blockchain</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/insurance/" rel="tag">insurance</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/use-cases/" rel="tag">Use cases</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/healthcare/" rel="tag">healthcare</a><span>&nbsp;|&nbsp;</span><a href="https://www.ibm.com/blog/tag/government/" rel="tag">government</a></div>
+
+<div class="post__author author  ">
+      <div class="author__box">
+            <div class="author__photo" style="background-image:  url(https://www.ibm.com/blog/wp-content/uploads/2018/02/300x300.jpg);"></div>
+            <div class="author__infos">
+
+                  <div class="author__name"><a href="https://www.ibm.com/blog/author/ibm-blockchain-unleashed/" >IBM Blockchain Pulse</a></div>
+                  <div class="author__role">IBM Blockchain Pulse</div>
+            </div>
+      </div>
+
+
+      </div>
+<!-- CONTINUE READING -->
+             </main>
+      </div>
+
+      
+<aside class="grid__sidebar post__sidebar post__sidebar--IBM_blog">
+      <div class="mobile_divider"></div>
+      <header class="post__sidebar__header">Trending</header>
+
+
+      <!-- ARTICLES  -->
+      
+      <article class="article article_grid article__mobile--card  article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/building-a-sustainable-automotive-supply-chain/" aria-label="Building a sustainable automotive supply chain">
+                  <div class="article__img">                <amp-img 
+                    alt="Automotive supply chain - Worker inspecting car body in car factory" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2023/06/06e2f56c8a3abd04-Edited.l_2x1-e1688083086703-630x330.jpg"
+                >
+                </amp-img>
+                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                  <!-- CAT -->
+                                                                  <a class="article__category_link" href="https://www.ibm.com/blog/category/supply-chain/" aria-label="https://www.ibm.com/blog/category/supply-chain/">
+                              Supply chain  
+                        </a>
+
+                                    <!-- DATE  -->
+                  <span class="article__date">
+                        June 30, 2023                  </span>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/building-a-sustainable-automotive-supply-chain/" class="article__content_link" aria-label="Building a sustainable automotive supply chain">
+                        <h2 class="article__title">Building a sustainable automotive supply chain</h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                              <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 3</span> <span class="rt-label rt-postfix">min read</span></span> - </span>Find out how to accelerate the path to a more resilient and sustainable automotive supply chain.                        </p>
+                  </a>
+            </div>
+      </article>
+
+      <article class="article article_grid article__mobile--card  article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/what-is-cloud-cost-optimization/" aria-label="What is cloud cost optimization?">
+                  <div class="article__img">                <amp-img 
+                    alt="Man using digital tablet in server room" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2023/06/c8962e97-9673-48fe-b2ad058e92d8c906-630x330.jpg"
+                >
+                </amp-img>
+                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                  <!-- CAT -->
+                                                                  <a class="article__category_link" href="https://www.ibm.com/blog/category/automation/" aria-label="https://www.ibm.com/blog/category/automation/">
+                              Automation  
+                        </a>
+
+                                    <!-- DATE  -->
+                  <span class="article__date">
+                        July 5, 2023                  </span>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/what-is-cloud-cost-optimization/" class="article__content_link" aria-label="What is cloud cost optimization?">
+                        <h2 class="article__title">What is cloud cost optimization?</h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                              <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 5</span> <span class="rt-label rt-postfix">min read</span></span> - </span>Cloud cost optimization combines strategies, techniques, best practices and tools to help reduce cloud costs and much more.                        </p>
+                  </a>
+            </div>
+      </article>
+
+      <article class="article article_grid article__mobile--card  article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link" href="https://www.ibm.com/blog/digital-twin-vs-digital-thread-two-complementary-ways-to-digitally-replicate-assets/" aria-label="Digital twin vs. digital thread: Two complementary ways to digitally replicate assets">
+                  <div class="article__img">                <amp-img 
+                    alt="Robot workers" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2023/06/img_6299-edit-edit.xl_2x1-630x330.png"
+                >
+                </amp-img>
+                        </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container" style="-webkit-box-orient: vertical;">
+                  <!-- CAT -->
+                                                                  <a class="article__category_link" href="https://www.ibm.com/blog/category/maximo/" aria-label="https://www.ibm.com/blog/category/maximo/">
+                              IBM Maximo  
+                        </a>
+
+                                    <!-- DATE  -->
+                  <span class="article__date">
+                        June 29, 2023                  </span>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/digital-twin-vs-digital-thread-two-complementary-ways-to-digitally-replicate-assets/" class="article__content_link" aria-label="Digital twin vs. digital thread: Two complementary ways to digitally replicate assets">
+                        <h2 class="article__title">Digital twin vs. digital thread: Two complementary ways to digitally replicate assets</h2>
+                        <p class="article__excerpt" style="-webkit-box-orient: vertical;">
+                              <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 3</span> <span class="rt-label rt-postfix">min read</span></span> - </span>As digital transformation accelerates in manufacturing and engineering, two concepts have gained significant traction: digital twins and digital threads.                        </p>
+                  </a>
+            </div>
+      </article>
+
+      <!-- ADVERTISEMENT -->
+                  <div class="billboard_wrapper">
+                  <a href=" " aria-label="A SPONSORED flag ">
+                        <amp-img layout='responsive' widht='300' height='250' src="" alt="">
+                        </amp-img>
+                  </a>
+            </div>
+      </aside>
+
+
+<!-- MOBILE ADVERTISING -->
+<aside class="post__mobile-ad">
+                  <div class="billboard_wrapper">
+                  <a href=" " aria-label="A SPONSORED flag ">
+                        <amp-img layout='responsive' widht='792' height='658' src="" alt="">
+                        </amp-img>
+                  </a>
+            </div>
+      </aside>
+</div>
+<script>
+      const kaltura = document.querySelectorAll("[data-widget=\"videoplayer\"]")
+      if (kaltura != null) {
+            kaltura.forEach(function(item){
+                  const kId = item.id + '--' + item.dataset.videoid;
+                  document.getElementById(item.id).id = kId;
+                  getKalturaVideo(item);
+            })
+      }
+</script>
+
+<div class="card_container_background  card_container--IBM_blog">
+    <section class="container cards cards--IBM_blog">
+        <h3>More from Blockchain</h3>
+        <div class="cards__wrapper">
+            
+      <article class="article article--card cards__article_grid   article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link"
+                  href="https://www.ibm.com/blog/web3-oracle-nodes-the-capabilities-and-challenges-of-an-industry-disruptor/">
+                  <div class="article__img">
+                                        <amp-img 
+                    alt="Plane flying through clouds" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2023/03/Web3Oracles-630x330.jpeg"
+                >
+                </amp-img>
+                                          </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container"
+                  style="-webkit-box-orient: vertical;">
+                  <!-- CAT AND DATE -->
+                  <div class="article__eyebrow">
+                                                                                    <a class="article__category_link"
+                                    href="https://www.ibm.com/blog/category/blockchain/">
+                                    Blockchain &nbsp;
+                              </a>
+                                                <span class="article__date">
+                              March 22, 2023                        </span>
+                  </div>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/web3-oracle-nodes-the-capabilities-and-challenges-of-an-industry-disruptor/" class="article__content_link">
+                        <div class="article__direction">
+                              <h2 class="article__title">
+                                    Web3 oracle nodes: The capabilities and challenges of an industry disruptor                              </h2>
+                              <p class="article__excerpt"
+                                    style="-webkit-box-orient: vertical;">
+                                    <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 3</span> <span class="rt-label rt-postfix">min read</span></span> - </span>In Greek mythology, oracles took once unattainable information from the gods and shared it with the world. Today, blockchain&nbsp;oracles pass information from one source to another. By design, a blockchain does not communicate with outside data sources; they only store historical on-chain user data. A blockchain oracle is the middleware that allows a blockchain to communicate with off-chain data. The addition of off-chain data provided by blockchain oracles was a huge step forward for the Web3 industry, enabling new use&hellip;                              </p>
+                        </div>
+                  </a>
+            </div>
+            <span class="article__read_time article__read_time--mobile"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 3</span> <span class="rt-label rt-postfix">min read</span></span></span>      </article>
+
+      <article class="article article--card cards__article_grid   article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link"
+                  href="https://www.ibm.com/blog/the-future-of-digital-money/">
+                  <div class="article__img">
+                                        <amp-img 
+                    alt="" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2022/12/48370390-3955-4c36-b4e8-36c03cdc9ea5.xlr.jpg"
+                >
+                </amp-img>
+                                          </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container"
+                  style="-webkit-box-orient: vertical;">
+                  <!-- CAT AND DATE -->
+                  <div class="article__eyebrow">
+                                                                                    <a class="article__category_link"
+                                    href="https://www.ibm.com/blog/category/blockchain/">
+                                    Blockchain &nbsp;
+                              </a>
+                                                <span class="article__date">
+                              December 9, 2022                        </span>
+                  </div>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/the-future-of-digital-money/" class="article__content_link">
+                        <div class="article__direction">
+                              <h2 class="article__title">
+                                    The Future of Digital Money                              </h2>
+                              <p class="article__excerpt"
+                                    style="-webkit-box-orient: vertical;">
+                                    <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 2</span> <span class="rt-label rt-postfix">min read</span></span> - </span>Central Bank Digital Currency (CBDC) is a new form of money that exists only in digital form. Instead of printing money, a central bank issues widely accessible digital coins so that digital transactions and transfers become simple. (more&hellip;)                              </p>
+                        </div>
+                  </a>
+            </div>
+            <span class="article__read_time article__read_time--mobile"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 2</span> <span class="rt-label rt-postfix">min read</span></span></span>      </article>
+
+      <article class="article article--card cards__article_grid   article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link"
+                  href="https://www.ibm.com/blog/fsma-rule-204d-digital-traceability-sustainability/">
+                  <div class="article__img">
+                                        <amp-img 
+                    alt="" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2022/12/136815411.xlr.jpg"
+                >
+                </amp-img>
+                                          </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container"
+                  style="-webkit-box-orient: vertical;">
+                  <!-- CAT AND DATE -->
+                  <div class="article__eyebrow">
+                                                                                    <a class="article__category_link"
+                                    href="https://www.ibm.com/blog/category/manufacturing/">
+                                    Manufacturing &nbsp;
+                              </a>
+                                                <span class="article__date">
+                              November 14, 2022                        </span>
+                  </div>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/fsma-rule-204d-digital-traceability-sustainability/" class="article__content_link">
+                        <div class="article__direction">
+                              <h2 class="article__title">
+                                    Under FSMA Rule 204(d), digital traceability can save lives by saving food supplies                              </h2>
+                              <p class="article__excerpt"
+                                    style="-webkit-box-orient: vertical;">
+                                    <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 4</span> <span class="rt-label rt-postfix">min read</span></span> - </span>An oft-overlooked clause of the US FDA’s Food Safety Modernization Act (FSMA) has the potential to drive global change in the way we sustainably source our food, providing a blueprint for governments around the world on how to create a lasting impact through regulation: digital traceability. In order to adequately and sustainably feed the world’s growing population, we can’t focus solely on food production. We have to also look at reducing food waste. Digital traceability gives organizations the ability to&hellip;                              </p>
+                        </div>
+                  </a>
+            </div>
+            <span class="article__read_time article__read_time--mobile"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 4</span> <span class="rt-label rt-postfix">min read</span></span></span>      </article>
+
+      <article class="article article--card cards__article_grid   article--IBM_blog">
+            <!-- IMG -->
+            <a class="exclusive_article__category_link"
+                  href="https://www.ibm.com/blog/why-central-banks-dislike-cryptocurrencies/">
+                  <div class="article__img">
+                                        <amp-img 
+                    alt="" 
+                    width="1200" 
+                    height="630" 
+                    layout="responsive" 
+                    src="https://www.ibm.com/blog/wp-content/uploads/2022/04/Bank-of-England-scaled.jpg"
+                >
+                </amp-img>
+                                          </div>
+            </a>
+            <!-- TXT -->
+            <div class="article__text_container"
+                  style="-webkit-box-orient: vertical;">
+                  <!-- CAT AND DATE -->
+                  <div class="article__eyebrow">
+                                                                                    <a class="article__category_link"
+                                    href="https://www.ibm.com/blog/category/financial-services/">
+                                    Financial services &nbsp;
+                              </a>
+                                                <span class="article__date">
+                              April 19, 2022                        </span>
+                  </div>
+                  <!-- TITLE & EXCERPT -->
+                  <a href="https://www.ibm.com/blog/why-central-banks-dislike-cryptocurrencies/" class="article__content_link">
+                        <div class="article__direction">
+                              <h2 class="article__title">
+                                    Why central banks dislike cryptocurrencies                              </h2>
+                              <p class="article__excerpt"
+                                    style="-webkit-box-orient: vertical;">
+                                    <span class="article__read_time"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 5</span> <span class="rt-label rt-postfix">min read</span></span> - </span>Cryptocurrencies, often depicted as an escape from fiat currency and legacy banking, have become a constant focus of bank and government activity. The most recent Executive Order from the U.S. President is just one example of governments carefully considering how to deal with cryptocurrencies. With all the news, it’s easy to lose sight of the fundamentals of monetary policy and currency, and why cryptocurrencies (or “cryptos”) are not a likely replacement for fiat currencies. In 2021 the Bank of International&hellip;                              </p>
+                        </div>
+                  </a>
+            </div>
+            <span class="article__read_time article__read_time--mobile"><span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 5</span> <span class="rt-label rt-postfix">min read</span></span></span>      </article>
+        </div>
+    </section>
+</div>
+      <dds-footer-container></dds-footer-container>
+      <script>
+            document.querySelector("dds-footer-container").size = 'default';
+
+            //Uncomment this to add a custom links.
+            // document.querySelector("dds-footer-container").adjunctLinks = [{
+            //             'title': 'IBM Custom Link',
+            //             'link': 'https://ibm.com'
+            //       },
+            //       {
+            //             'title': 'IBM Custom Link2',
+            //             'link': 'https://ibm.com'
+            //       }
+            // ];
+      </script>
+
+
+<script>
+      </script>
+
+
+<!-- FOOTER SCRIPTS -->
+<script type='text/javascript' id='qppr_frontend_scripts-js-extra'>
+/* <![CDATA[ */
+var qpprFrontData = {"linkData":{"https:\/\/www.ibm.com\/blog\/ai-governance-break-open-the-black-box\/":[0,0,""]},"siteURL":"https:\/\/www.ibm.com\/blog","siteURLq":"https:\/\/www.ibm.com"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.ibm.com/blog/wp-content/plugins/quick-pagepost-redirect-plugin/js/qppr_frontend_script.min.js?ver=5.2.3' id='qppr_frontend_scripts-js'></script>
+
+</body>
+
+</html>

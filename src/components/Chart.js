@@ -53,8 +53,8 @@ const Chart = () => {
 
   return (
     <div>
-      <div className="row" style={{color:"	 #cc0000" }}>
-        <div className="col-md-3 col-sm-6 mb-3" >
+      <div className="row" style={{ color: "	 #cc0000" }}>
+        <div className="col-md-3 col-sm-6 mb-3">
           <label htmlFor="currency">Currency:</label>
           <select
             id="currency"
@@ -94,6 +94,9 @@ const Chart = () => {
             className="form-select"
             value={crypto}
             onChange={(e) => setCrypto(e.target.value)}
+            // style={{ height: '100px', overflowY: 'auto' }}
+
+            // size={10}
           >
             <option value="bitcoin">Bitcoin</option>
             <option value="ethereum">Ethereum</option>
@@ -103,6 +106,19 @@ const Chart = () => {
             <option value="tether">Tether</option>
             <option value="solana">Solana</option>
             <option value="dogecoin">Dogecoin</option>
+            <option value="cardano">Cardano</option>
+            <option value="polkadot">Polkadot</option>
+            <option value="binancecoin">Binance Coin</option>
+            <option value="bitcoin-cash">Bitcoin Cash</option>
+            <option value="uniswap">Uniswap</option>
+            <option value="chainlink">Chainlink</option>
+            <option value="stellar">Stellar</option>
+            <option value="vechain">VeChain</option>
+            <option value="theta-token">Theta Token</option>
+            <option value="filecoin">Filecoin</option>
+            <option value="terra">Terra</option>
+            <option value="tron">Tron</option>
+            <option value="cosmos">Cosmos</option>
           </select>
         </div>
         <div className="col-md-3 col-sm-6 mb-3">

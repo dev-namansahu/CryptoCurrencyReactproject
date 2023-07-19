@@ -83,3 +83,7 @@ tr.bordered{
 #maincontainer{
   background-color: #954c4c;
 }
+#crypto{
+  max-height: 50px; 
+  overflow-y: auto;
+}

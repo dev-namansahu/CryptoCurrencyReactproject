@@ -38,10 +38,11 @@ function App() {
               aria-describedby="basic-addon1"
               value={searchTerm}
               onChange={handleChange}
+            
             />
           </div>
           <div className="col-lg-1 col-md-2 col-sm-3">
-            <button style={{ height: '35px' }} onClick={handleSearch}>
+            <button style={{ height: '35px' }} onClick={handleSearch}  disabled={!searchTerm}>
               Search
             </button>
           </div>

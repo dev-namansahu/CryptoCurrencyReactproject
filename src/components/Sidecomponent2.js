@@ -76,6 +76,7 @@ const CoinGeckoAPI = () => {
         style={{
           border: "1px solid black",
           backgroundColor: "white",
+          width:"100%",
           padding: "50px",
         }}
       >

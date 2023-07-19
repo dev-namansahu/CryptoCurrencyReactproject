@@ -74,7 +74,7 @@ const Exchange = () => {
   };
 
   return (
-    <div className="row" style={{ backgroundColor: "white", height: "100%" }}>
+    <div className="row" style={{ backgroundColor: "white", height: "100%" , maxWidth:"100%"}}>
       <h5 style={{ fontWeight: "bolder", padding: "10px" }}>Exchange coins</h5>{" "}
       <br />
       <div className="row" style={{ display: "flex" }}>
@@ -92,15 +92,15 @@ const Exchange = () => {
               ))}
             </select>
           </label>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
         </div>
-        <div className="col-md-6">
+        <div className="col-md-4">
           <label>
             <input
               type="text"
               placeholder="&nbsp;Enter Value"
               value={sellAmount}
-              onChange={handleSellAmountChange}
+              onChange={handleSellAmountChange} style={{width:"100%"}}
             />
           </label>
           {errorMessage && <p>{errorMessage}</p>}
@@ -133,7 +133,7 @@ const Exchange = () => {
         </div>
       </div>
       <br /> <br />
-      <div className="row" style={{ marginLeft: "120px" }}>
+      <div className="row-xl-12" style={{ marginLeft: "120px" }}>
         <button
           onClick={handleBuyButtonClick}
           style={{ width: "150px", alignItems: "center" }}

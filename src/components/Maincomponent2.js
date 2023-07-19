@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import back from "./image/bACK.jpg";
 
+
+
+
 export default function Maincomponent2({ searchTerm, onBackClick }) {
   const [cryptoData, setCryptoData] = useState(null);
   const [data, setData] = useState(null);
@@ -88,6 +91,7 @@ export default function Maincomponent2({ searchTerm, onBackClick }) {
           </div>
         </div>
       </div>
+      
     </>
   );
 }

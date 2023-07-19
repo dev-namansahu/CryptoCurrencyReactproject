@@ -36,7 +36,7 @@ export default function Piechart() {
         >
           Portfolio
         </h4>
-        <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto' }}>
+        <div style={{ width: '100%', maxWidth: '400px', margin: '0 auto' }}>
           <ApexCharts
             options={chartOptions}
             series={chartOptions.series}
